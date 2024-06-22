@@ -30,7 +30,7 @@ Deploy the WAR file to Apache Tomcat or any servlet container.
 Accessing the Application:
 
 Start Apache Tomcat.
-Access the address form through http://localhost:8080/your-web-app-name/address-form.html.
+Access the address form through http://localhost:8080/avs-web/avs-service.
 Submit the form to query address details based on the provided pincode.
 Usage
 Fill in the address form with locality, pincode, sub-district, district, and state.

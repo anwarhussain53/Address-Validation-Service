@@ -1,0 +1,52 @@
+package com.avs.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class AvsService extends HttpServlet {
+
+	private static final long serialVersionUID = 1L;
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		// Set response content type
+		response.setContentType("text/html");
+
+		// Actual logic goes here.
+		PrintWriter out = response.getWriter();
+		out.println("<h1>Hello World</h1");
+	}
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// Set response content type
+		response.setContentType("text/html");
+
+		// Retrieve form data
+		String locality = request.getParameter("locality");
+		String pincode = request.getParameter("pincode");
+		String subDistname = request.getParameter("sub_district");
+		String districtname = request.getParameter("district");
+		String stateName = request.getParameter("state");
+
+		// Validate and process the form data (you can add validation and database
+		// operations here)
+		// For example, you might want to store this data in a database
+
+		// Example output to confirm receipt of data
+		PrintWriter out = response.getWriter();
+		out.println("<html><body>");
+		out.println("<h1>Address Form Data Received</h1>");
+		out.println("<p>Locality: " + locality + "</p>");
+		out.println("<p>Pincode: " + pincode + "</p>");
+		out.println("<p>Sub-district: " + subDistname + "</p>");
+		out.println("<p>District: " + districtname + "</p>");
+		out.println("<p>State: " + stateName + "</p>");
+		out.println("</body></html>");
+	}
+
+}

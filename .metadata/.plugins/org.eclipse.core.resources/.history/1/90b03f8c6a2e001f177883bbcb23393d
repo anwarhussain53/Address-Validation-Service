@@ -1,0 +1,9 @@
+package com.avs.db;
+
+public class Avs {
+
+	public Avs() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

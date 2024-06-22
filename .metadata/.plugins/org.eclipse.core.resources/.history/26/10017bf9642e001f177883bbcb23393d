@@ -1,0 +1,9 @@
+package com.avs.servlet;
+
+public class servletavs {
+
+	public servletavs() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
